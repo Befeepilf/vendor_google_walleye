@@ -55,7 +55,7 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := qti-vzw-ims-internal
+LOCAL_MODULE := com.qti.vzw.ims.internal
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_OWNER := google
 LOCAL_MODULE_PATH := $(PRODUCT_OUT)/$(TARGET_COPY_OUT_VENDOR)/framework
@@ -76,6 +76,7 @@ LOCAL_REQUIRED_MODULES := libimscamera_jni_64.so libimsmedia_jni_64.so
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_USES_LIBRARIES := com.qti.vzw.ims.internal
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
