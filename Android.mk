@@ -15,6 +15,7 @@ LOCAL_SRC_FILES := vendor/app/ModemService/ModemService.apk
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_OPTIONAL_USES_LIBRARIES := com.qualcomm.qcrilhook
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -27,6 +28,7 @@ LOCAL_SRC_FILES := vendor/app/QtiTelephonyService/QtiTelephonyService.apk
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_USES_LIBRARIES := com.qualcomm.qcrilhook
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -158,7 +160,7 @@ LOCAL_MODULE_SUFFIX := $(COMMON_JAVA_PACKAGE_SUFFIX)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := qcrilhook
+LOCAL_MODULE := com.qualcomm.qcrilhook
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_OWNER := google
 LOCAL_MODULE_PATH := $(PRODUCT_OUT)/$(TARGET_COPY_OUT_SYSTEM)/framework
