@@ -3,11 +3,6 @@
 LOCAL_PATH := $(call my-dir)
 ifeq ($(TARGET_DEVICE),walleye)
 
-expected_build_id := $(shell cat vendor/google_devices/walleye/build_id.txt)
-ifneq ($(BUILD_ID),$(expected_build_id))
-    $(error "Expected BUILD_ID is $(expected_build_id) and currently building with $(BUILD_ID)")
-endif
-
 include vendor/google_devices/walleye/AndroidBoardVendor.mk
 
 include $(CLEAR_VARS)
